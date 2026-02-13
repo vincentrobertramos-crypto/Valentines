@@ -158,7 +158,7 @@ if (yesButton) {
         // Change to your "Success" GIF
         if (mainGif) {
             // Replace 'GIF/happy.gif' with your actual local happy gif path
-            mainGif.src = "Valentines/GIF/manja.gif"; 
+            mainGif.src = "GIF/manja.gif"; 
             
             // Optional: Reset scale to normal so the happy GIF looks clean
             mainGif.style.transform = "scale(1)";
