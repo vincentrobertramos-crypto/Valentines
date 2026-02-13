@@ -157,7 +157,6 @@ if (yesButton) {
         
         // Change to your "Success" GIF
         if (mainGif) {
-            // Replace 'GIF/happy.gif' with your actual local happy gif path
             mainGif.src = "GIF/manja.gif"; 
             
             // Optional: Reset scale to normal so the happy GIF looks clean
@@ -168,4 +167,5 @@ if (yesButton) {
         yesButton.style.transform = "scale(1)";
         yesButton.style.transition = "transform 0.3s ease";
     });
+
 }
