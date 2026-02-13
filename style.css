@@ -1,0 +1,168 @@
+/* style.css */
+
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffb6c1;
+    font-family: 'Pacifico', cursive;; /* changed to normal font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.message {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* custom font for this text */
+    font-size: 18px;    /* adjust size */
+    font-weight: 500;   /* optional: boldness */
+    color: #000000;     /* color */
+    margin-top: 20px;   /* spacing from GIF */
+    margin-bottom: 40px;/* spacing from buttons */
+    text-align: center;
+}
+
+
+/* Floating Hearts & Flowers */
+.floating {
+    position: fixed;
+    bottom: -20px;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Floating overlay confetti */
+.floating {
+    position: fixed;
+    bottom: -20px;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.confetti {
+    font-size: 24px;
+    pointer-events: none;
+    position: fixed;
+}
+
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* Main Container */
+.container {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+h1 {
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+/* Image */
+img {
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Button Wrapper */
+.buttons {
+    position: relative;
+    height: 70px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    border: 2px solid #ff4d6d;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.music-btn:active {
+    transform: scale(0.9);
+}
+
+/* Yes Button */
+#yesBtn {
+    background-color: #00f449;
+    color: white;
+    left: 40px; /* Stays on the left side of the container */
+}
+
+#yesBtn:hover {
+    background-color: #e63950;
+    transform: scale(1.1);
+}
+
+/* No Button */
+#noBtn {
+    right: 40px; /* THIS FIXES THE OVERLAP - puts it on the right side */
+    width: 100px;
+    height: 44px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease, top 0.3s ease, transform 0.3s ease;
+}
+
+#noBtn:hover {
+    background-color: #ff0425;
+    transform: scale(1.1);
+}
